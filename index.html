@@ -16,15 +16,25 @@
       padding-top: 5rem;
       display: flex;
       justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    #heading {
+      color: #003366;
+      font-size: 2rem;
+      margin-bottom: 2rem;
     }
     #message-container {
       width: 80%;
       max-width: 1200px;
       margin-bottom: 2rem;
+      background: url('logo.png') no-repeat;
+      background-size: contain;
+      opacity: 0.8;
     }
     #message-container div {
-      background-color: #f8f9fa;
-      border: 1px solid #ced4da;
+      background-color: #87c3ff;
+      border: 1px solid #0080ff;
       border-radius: 0.25rem;
       padding: 0.5rem;
       margin-bottom: 0.5rem;
@@ -40,9 +50,17 @@
     #message-input {
       flex-grow: 1;
     }
+    #send-button {
+      transition: background-color 0.3s, color 0.3s;
+    }
+    #send-button:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
+  <h1 id="heading">Connectify</h1>
   <div id="message-container" class="container"></div>
   <form id="send-container" class="container">
     <div class="input-group">
